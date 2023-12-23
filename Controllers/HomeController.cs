@@ -1,8 +1,10 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using HospitaAppointmentSystem.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HospitaAppointmentSystem.Controllers;
+[Authorize]
 
 public class HomeController : Controller
 {

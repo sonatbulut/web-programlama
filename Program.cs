@@ -16,6 +16,18 @@ builder.Services.AddDbContext<DataContext>(options=>{
 });
 builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<DataContext>();
 
+builder.Services.Configure<IdentityOptions>(options=>{
+    options.Password.RequireDigit=false;
+    options.Password.RequireLowercase=false;
+    options.Password.RequireNonAlphanumeric=false;
+    options.Password.RequireUppercase=false;
+    options.Password.RequiredLength=1;
+});
+
+builder.Services.ConfigureApplicationCookie(options=>{
+    options.LoginPath="/Account/Login";
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -30,6 +42,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();
 
 app.UseAuthorization();
 

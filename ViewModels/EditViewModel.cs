@@ -19,5 +19,7 @@ namespace HospitaAppointmentSystem.ViewModels
         [Compare(nameof(Password),ErrorMessage = "Pasword does not match")]
         public string? ConfirmPassword { get; set; } 
 
+        public IList<string>? SelectedRoles { get; set; }
+
     }
 }
