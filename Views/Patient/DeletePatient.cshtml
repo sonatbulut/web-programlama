@@ -1,0 +1,10 @@
+@model Patient
+
+<p>
+    Do you want to delete the patient named <b>@Model.PatientName @Model.PatientSurname</b> ?
+    <form asp-action="DeletePatient" method="post">
+        <input type="hidden" value="@Model.PatientId" name="id">
+        <button type="submit" class="btn btn-danger">Yes</button>
+        <a asp-action="IndexPatient" class="btn btn-primary">No</a>
+    </form> 
+</p>

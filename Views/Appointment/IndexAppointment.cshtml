@@ -1,0 +1,32 @@
+@model IEnumerable<Appointment>
+
+    <h2>Appointment List</h2>
+    <a href="/Appointment/CreateAppointment" class="btn btn-primary">Add Appointment</a>
+    <hr>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(m=> m.AppointmentId)</th>
+                <th>@Html.DisplayNameFor(m=> m.Doctor.DocNameSurname)</th>
+                <th>@Html.DisplayNameFor(m=> m.Patient.PatientNameSurname)</th>
+                <th>@Html.DisplayNameFor(m=> m.AppointmentDate)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem=> item.AppointmentId)</td>
+                    <td>@Html.DisplayFor(modelItem=> item.Doctor.DocNameSurname)</td>
+                    <td>@Html.DisplayFor(modelItem=> item.Patient.PatientNameSurname)</td>
+                    <td>@Html.DisplayFor(modelItem=> item.AppointmentDate)</td>
+                    <td>
+                        <a asp-action="EditAppointment" asp-route-id="@item.AppointmentId" class="btn btn-sm btn-primary">Edit</a>
+                        <a asp-action="DeleteAppointment" asp-route-id="@item.AppointmentId" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>

@@ -1,0 +1,26 @@
+@model Patient
+
+<h2>Add Doctor</h2>
+<hr>
+<form asp-controller="Patient" asp-action="CreatePatient" method="post">
+    <div class="mb3">
+        <label asp-for="PatientName" class="form-label">Patient Name</label>
+        <input asp-for="PatientName" class="form-control">
+    </div>
+
+    <div class="mb3">
+        <label asp-for="PatientSurname" class="form-label">Patient Surname</label>
+        <input asp-for="PatientSurname" class="form-control">
+    </div>
+
+    <div class="mb3">
+        <label asp-for="PatientEmail" class="form-label">Patient E-mail</label>
+        <input asp-for="PatientEmail" class="form-control">
+    </div>
+
+    <div class="mb3">
+        <label asp-for="PatientPhone" class="form-label">Patient Phone Number</label>
+        <input asp-for="PatientPhone" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-secondary">Save</button>
+</form>

@@ -1,0 +1,45 @@
+@model Doctor
+
+<h2>Edit Doctor</h2>
+<hr>
+<div class="row">
+    <div class="col-8">
+        <form asp-controller="Doctor" asp-action="EditDoc" method="post">
+            <input type="hidden" asp-for="DoctorId">
+            <div class="mb3">
+                <label asp-for="DocName" class="form-label">Doctor Name</label>
+                <input asp-for="DocName" class="form-control">
+            </div>
+        
+            <div class="mb3">
+                <label asp-for="DocSurname" class="form-label">Doctor Surname</label>
+                <input asp-for="DocSurname" class="form-control">
+            </div>
+        
+            <div class="mb3">
+                <label asp-for="DocEmail" class="form-label">Doctor E-mail</label>
+                <input asp-for="DocEmail" class="form-control">
+            </div>
+        
+            <div class="mb3">
+                <label asp-for="DocSpeacialty" class="form-label">Doctor Speacialty</label>
+                <input asp-for="DocSpeacialty" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-secondary">Save</button>
+        </form>
+    </div>
+    <div class="col-4">
+        <h4>Appointments</h4>
+        <hr>
+        <ul>
+            @foreach(var item in @Model.Appointments)
+            {
+                <li>@item.Patient.PatientNameSurname</li>
+                <li>@item.Patient.PatientPhone</li>
+                <li>@item.Patient.PatientEmail</li>
+
+            }
+        </ul>
+    </div>
+</div>
+

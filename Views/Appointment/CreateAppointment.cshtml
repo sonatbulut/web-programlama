@@ -1,0 +1,28 @@
+@model Appointment
+
+<h2>Add Appointment</h2>
+<hr>
+<form asp-controller="Appointment" asp-action="CreateAppointment" method="post">
+
+    <div class="mb3">
+        <label asp-for="DoctorId" class="form-label">Doctor Id</label>
+        <select asp-for="DoctorId" asp-items="ViewBag.Doctors" class="form-control">
+            <option value="">Choose</option>
+        </select>
+    </div>
+
+    <div class="mb3">
+        <label asp-for="PatientId" class="form-label">Patient Id</label>
+        <select asp-for="PatientId" asp-items="ViewBag.Patients" class="form-control">
+            <option value="">Choose</option>
+        </select>
+    </div>
+
+    <div class="mb3">
+        <label asp-for="AppointmentDate" class="form-label">Appointment Date</label>
+        <input asp-for="AppointmentDate" class="form-control">
+    </div>
+
+    
+    <button type="submit" class="btn btn-secondary">Save</button>
+</form>
