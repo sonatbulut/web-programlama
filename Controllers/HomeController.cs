@@ -4,7 +4,7 @@ using HospitaAppointmentSystem.Models;
 using Microsoft.AspNetCore.Authorization;
 
 namespace HospitaAppointmentSystem.Controllers;
-[Authorize]
+//[Authorize]
 
 public class HomeController : Controller
 {

@@ -22,10 +22,12 @@ builder.Services.Configure<IdentityOptions>(options=>{
     options.Password.RequireNonAlphanumeric=false;
     options.Password.RequireUppercase=false;
     options.Password.RequiredLength=1;
+    options.User.AllowedUserNameCharacters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+/ ";
 });
 
 builder.Services.ConfigureApplicationCookie(options=>{
     options.LoginPath="/Account/Login";
+    options.AccessDeniedPath="/Account/AccessDenied";
 });
 
 var app = builder.Build();
