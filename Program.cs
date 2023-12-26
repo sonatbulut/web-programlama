@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddScoped<IDoctorRepository,DoctorRepository>();
 
 
 builder.Services.AddDbContext<DataContext>(options=>{
@@ -29,6 +29,7 @@ builder.Services.ConfigureApplicationCookie(options=>{
     options.LoginPath="/Account/Login";
     options.AccessDeniedPath="/Account/AccessDenied";
 });
+
 
 var app = builder.Build();
 

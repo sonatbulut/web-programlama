@@ -12,6 +12,7 @@
                 <th>@Html.DisplayNameFor(m=> m.DocSurname)</th>
                 <th>@Html.DisplayNameFor(m=> m.DocEmail)</th>
                 <th>@Html.DisplayNameFor(m=> m.DocSpeacialty)</th>
+                <th>@Html.DisplayNameFor(m=> m.Image)</th>
             </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@
                     <td>@Html.DisplayFor(modelItem=> item.DocSurname)</td>
                     <td>@Html.DisplayFor(modelItem=> item.DocEmail)</td>
                     <td>@Html.DisplayFor(modelItem=> item.DocSpeacialty)</td>
+                    <td>@Html.DisplayFor(modelItem=> item.Image)</td>
                     <td>
                         <a asp-action="EditDoc" asp-route-id="@item.DoctorId" class="btn btn-sm btn-primary">Edit</a>
                         <a asp-action="DeleteDoc" asp-route-id="@item.DoctorId" class="btn btn-sm btn-danger">Delete</a>

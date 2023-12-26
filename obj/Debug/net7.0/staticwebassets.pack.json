@@ -13,6 +13,30 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\img\\45d78429-a576-4b19-bcd2-236dc61145af.png",
+      "PackagePath": "staticwebassets\\img\\45d78429-a576-4b19-bcd2-236dc61145af.png"
+    },
+    {
+      "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\img\\78c351c1-4cb3-4432-a6fa-e17c6773fa46.png",
+      "PackagePath": "staticwebassets\\img\\78c351c1-4cb3-4432-a6fa-e17c6773fa46.png"
+    },
+    {
+      "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\img\\94a00a73-ca6e-425b-8bb0-f838ad17e62b.png",
+      "PackagePath": "staticwebassets\\img\\94a00a73-ca6e-425b-8bb0-f838ad17e62b.png"
+    },
+    {
+      "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\img\\doctor.png",
+      "PackagePath": "staticwebassets\\img\\doctor.png"
+    },
+    {
+      "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\img\\ela.jpg",
+      "PackagePath": "staticwebassets\\img\\ela.jpg"
+    },
+    {
+      "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\img\\fb89d2b8-e58e-4d99-b4e8-8ff6073b1a43.jpg",
+      "PackagePath": "staticwebassets\\img\\fb89d2b8-e58e-4d99-b4e8-8ff6073b1a43.jpg"
+    },
+    {
       "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

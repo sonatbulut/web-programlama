@@ -2,7 +2,7 @@
 
 <h2>Add Doctor</h2>
 <hr>
-<form asp-controller="Doctor" asp-action="Create" method="post">
+<form asp-controller="Doctor" asp-action="Create" method="post" enctype="multipart/form-data">
     <div class="mb3">
         <label asp-for="DocName" class="form-label">Doctor Name</label>
         <input asp-for="DocName" class="form-control">
@@ -21,6 +21,9 @@
     <div class="mb3">
         <label asp-for="DocSpeacialty" class="form-label">Doctor Speacialty</label>
         <input asp-for="DocSpeacialty" class="form-control">
+    </div>
+    <div class="input-group mb3">
+        <input asp-for="Image" type="file" name="imageFile" id="imageFile" class="form-control">
     </div>
     <button type="submit" class="btn btn-secondary">Save</button>
 </form>

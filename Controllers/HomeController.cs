@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using HospitaAppointmentSystem.Models;
 using Microsoft.AspNetCore.Authorization;
+using HospitaAppointmentSystem.Data;
 
 namespace HospitaAppointmentSystem.Controllers;
 //[Authorize]
@@ -9,15 +10,20 @@ namespace HospitaAppointmentSystem.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly DataContext _context;
+    private readonly IDoctorRepository _doctorRepository;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger,DataContext context,IDoctorRepository doctorRepository)
     {
         _logger = logger;
-    }
+        _doctorRepository=doctorRepository;
+        _context=context;
 
+    }
     public IActionResult Index()
     {
-        return View();
+        var doctors = _doctorRepository.GetAllDoctors();
+        return View(doctors);
     }
 
     public IActionResult Privacy()

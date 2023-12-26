@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HospitaAppointmentSystem.Controllers
 {
-    [Authorize(Roles ="admin")]
+    //[Authorize(Roles ="admin")]
     public class UsersController:Controller
     {
 

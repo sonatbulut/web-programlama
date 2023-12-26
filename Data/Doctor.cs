@@ -17,6 +17,7 @@ namespace HospitaAppointmentSystem.Data
         }
         public string? DocEmail { get; set; }
         public string? DocSpeacialty { get; set; }
+        public string? Image { get; set; }
         public ICollection<Appointment> Appointments { get; set; }= new List<Appointment>();
 
     }

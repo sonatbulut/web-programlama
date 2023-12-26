@@ -22,8 +22,19 @@ namespace HospitaAppointmentSystem.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Doctor model)
+        public async Task<IActionResult> Create(Doctor model,IFormFile imageFile)
         {
+            var extension = Path.GetExtension(imageFile.FileName);
+            var randomFileName = string.Format($"{Guid.NewGuid().ToString()}{extension}");
+            var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot/img",randomFileName);
+            if (ModelState.IsValid)
+            {
+                using (var stream = new FileStream(path,FileMode.Create))
+                {
+                    await imageFile.CopyToAsync(stream);
+                }
+                model.Image=randomFileName;
+            }
             _context.Doctors.Add(model);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
