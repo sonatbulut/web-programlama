@@ -25,6 +25,15 @@
                 <label asp-for="DocSpeacialty" class="form-label">Doctor Speacialty</label>
                 <input asp-for="DocSpeacialty" class="form-control">
             </div>
+
+            <div class="input-group mb3">
+                <input  type="file" name="imageFile" id="imageFile" class="form-control">
+            </div>
+
+            <div>
+                <img src="~/img/@Model.Image" alt="" style="width: 100px;">
+                <input type="hidden" asp-for="Image" name="@Model.Image">
+            </div>
             <button type="submit" class="btn btn-secondary">Save</button>
         </form>
     </div>

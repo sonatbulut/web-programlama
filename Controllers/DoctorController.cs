@@ -1,4 +1,5 @@
 using HospitaAppointmentSystem.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,12 +17,15 @@ namespace HospitaAppointmentSystem.Controllers
         {
             return View(await _context.Doctors.ToListAsync());
         }
+
+        [Authorize(Roles = "admin")]
         public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Create(Doctor model,IFormFile imageFile)
         {
             var extension = Path.GetExtension(imageFile.FileName);

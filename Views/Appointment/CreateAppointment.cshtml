@@ -4,6 +4,21 @@
 <hr>
 <form asp-controller="Appointment" asp-action="CreateAppointment" method="post">
 
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            <ul>
+                @foreach (var modelState in ViewData.ModelState.Values)
+                {
+                    @foreach (var error in modelState.Errors)
+                    {
+                        <li>@error.ErrorMessage</li>
+                    }
+                }
+            </ul>
+        </div>
+    }
+
     <div class="mb3">
         <label asp-for="DoctorId" class="form-label">Doctor Id</label>
         <select asp-for="DoctorId" asp-items="ViewBag.Doctors" class="form-control">
@@ -17,12 +32,17 @@
             <option value="">Choose</option>
         </select>
     </div>
-
+    
     <div class="mb3">
         <label asp-for="AppointmentDate" class="form-label">Appointment Date</label>
-        <input asp-for="AppointmentDate" class="form-control">
+        <input asp-for="AppointmentDate" type="date" class="form-control">
     </div>
 
-    
+    <div class="mb3">
+        <!-- Tarih seçimi için input -->
+        <select asp-for="AppointmentTime" asp-items="ViewBag.AvailableTimes" class="form-control"></select>
+    </div>
     <button type="submit" class="btn btn-secondary">Save</button>
 </form>
+
+<script src="~/js/createAppointment.js" asp-append-version="true"></script>
