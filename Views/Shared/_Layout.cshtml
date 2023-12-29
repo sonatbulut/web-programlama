@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - HospitaAppointmentSystem</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/HospitaAppointmentSystem.styles.css" asp-append-version="true" />
 </head>
@@ -24,42 +25,57 @@
                             @if(User.IsInRole("admin"))
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Doctor" asp-action="Index">Doctors</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Doctor" asp-action="Index">@_localization.Getkey("Doctors").Value</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Patient" asp-action="IndexPatient">Patients</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Patient" asp-action="IndexPatient">@_localization.Getkey("Patients").Value</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Appointment" asp-action="IndexAppointment">Appointments</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Appointment" asp-action="IndexAppointment">@_localization.Getkey("Appointments").Value</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">Users</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">@_localization.Getkey("Users").Value</a>
                                 </li>
                             }
                         }
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">@_localization.Getkey("Home").Value</a>
                         </li> 
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         @if(User.Identity?.IsAuthenticated==true)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark">Welcome, @User.Identity.Name</a>
+                                <a class="nav-link text-dark">@_localization.Getkey("Welcome").Value, @User.Identity.Name</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">@_localization.Getkey("Logout").Value</a>
                             </li>
                         }
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">@_localization.Getkey("Login").Value</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Create">Register</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Create">@_localization.Getkey("Register").Value</a>
                             </li>
                         }
+                        <li class="nav-item">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Dil
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item"
+                                  href="@Url.Action("ChangeLanguage", "Home", new { culture = "tr-TR" })">Türkçe</a>
+                                <a class="dropdown-item"
+                                  href="@Url.Action("ChangeLanguage", "Home", new { culture = "en-US" })">English</a>
+                              </div>
+                            </div>
+                
+                          </li>
                     </ul>
                 </div>
             </div>
@@ -71,11 +87,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - HospitaAppointmentSystem - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

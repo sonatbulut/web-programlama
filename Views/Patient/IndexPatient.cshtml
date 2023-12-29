@@ -1,17 +1,17 @@
 @model IEnumerable<Patient>
 
-    <h2>Patient List</h2>
-    <a href="/Patient/CreatePatient" class="btn btn-primary">Add Patient</a>
+    <h2>@_localization.Getkey("PatientList").Value</h2>
+    <a href="/Patient/CreatePatient" class="btn btn-primary">@_localization.Getkey("AddPatient").Value</a>
     <hr>
 
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>@Html.DisplayNameFor(m=> m.PatientId)</th>
-                <th>@Html.DisplayNameFor(m=> m.PatientName)</th>
-                <th>@Html.DisplayNameFor(m=> m.PatientSurname)</th>
-                <th>@Html.DisplayNameFor(m=> m.PatientEmail)</th>
-                <th>@Html.DisplayNameFor(m=> m.PatientPhone)</th>
+                <th>@_localization.Getkey("PatientId").Value</th>
+                <th>@_localization.Getkey("PatientName").Value</th>
+                <th>@_localization.Getkey("PatientSurname").Value</th>
+                <th>@_localization.Getkey("PatientEmail").Value</th>
+                <th>@_localization.Getkey("PatientPhone").Value</th>
             </tr>
         </thead>
         <tbody>
@@ -24,8 +24,8 @@
                     <td>@Html.DisplayFor(modelItem=> item.PatientEmail)</td>
                     <td>@Html.DisplayFor(modelItem=> item.PatientPhone)</td>
                     <td>
-                        <a asp-action="EditPatient" asp-route-id="@item.PatientId" class="btn btn-sm btn-primary">Edit</a>
-                        <a asp-action="DeletePatient" asp-route-id="@item.PatientId" class="btn btn-sm btn-danger">Delete</a>
+                        <a asp-action="EditPatient" asp-route-id="@item.PatientId" class="btn btn-sm btn-primary">@_localization.Getkey("Edit").Value</a>
+                        <a asp-action="DeletePatient" asp-route-id="@item.PatientId" class="btn btn-sm btn-danger">@_localization.Getkey("Delete").Value</a>
                     </td>
                 </tr>
             }

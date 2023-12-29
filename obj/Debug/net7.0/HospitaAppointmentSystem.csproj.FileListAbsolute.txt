@@ -131,3 +131,12 @@ C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\bin\Debug\net7.0\Micr
 C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\obj\Debug\net7.0\HospitaAppointmentSystem.csproj.GenerateResource.cache
+C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\obj\Debug\net7.0\HospitaAppointmentSystem.Resources.SharedResource.en-US.resources
+C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\bin\Debug\net7.0\en-US\HospitaAppointmentSystem.resources.dll
+C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\bin\Debug\net7.0\tr-TR\HospitaAppointmentSystem.resources.dll
+C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\obj\Debug\net7.0\en-US\HospitaAppointmentSystem.resources.cs
+C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\obj\Debug\net7.0\en-US\HospitaAppointmentSystem.resources.dll
+C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\obj\Debug\net7.0\tr-TR\HospitaAppointmentSystem.resources.cs
+C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\obj\Debug\net7.0\tr-TR\HospitaAppointmentSystem.resources.dll
+C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\obj\Debug\net7.0\HospitaAppointmentSystem.Resources.SharedResource.tr-TR.resources

@@ -1,18 +1,18 @@
 @model IEnumerable<Doctor>
 
-    <h2>Doctor List</h2>
-    <a href="/Doctor/Create" class="btn btn-primary">Add Doctor</a>
+    <h2>@_localization.Getkey("DoctorList").Value</h2>
+    <a href="/Doctor/Create" class="btn btn-primary">@_localization.Getkey("AddDoctor").Value</a>
     <hr>
 
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>@Html.DisplayNameFor(m=> m.DoctorId)</th>
-                <th>@Html.DisplayNameFor(m=> m.DocName)</th>
-                <th>@Html.DisplayNameFor(m=> m.DocSurname)</th>
-                <th>@Html.DisplayNameFor(m=> m.DocEmail)</th>
-                <th>@Html.DisplayNameFor(m=> m.DocSpeacialty)</th>
-                <th>@Html.DisplayNameFor(m=> m.Image)</th>
+                <th>@_localization.Getkey("DoctorId").Value</th>
+                <th>@_localization.Getkey("DoctorName").Value</th>
+                <th>@_localization.Getkey("DoctorSurname").Value</th>
+                <th>@_localization.Getkey("DoctorEmail").Value</th>
+                <th>@_localization.Getkey("DoctorSpeciality").Value</th>
+                <th>@_localization.Getkey("DoctorImage").Value</th>
             </tr>
         </thead>
         <tbody>
@@ -26,8 +26,8 @@
                     <td>@Html.DisplayFor(modelItem=> item.DocSpeacialty)</td>
                     <td>@Html.DisplayFor(modelItem=> item.Image)</td>
                     <td>
-                        <a asp-action="EditDoc" asp-route-id="@item.DoctorId" class="btn btn-sm btn-primary">Edit</a>
-                        <a asp-action="DeleteDoc" asp-route-id="@item.DoctorId" class="btn btn-sm btn-danger">Delete</a>
+                        <a asp-action="EditDoc" asp-route-id="@item.DoctorId" class="btn btn-sm btn-primary">@_localization.Getkey("Edit").Value</a>
+                        <a asp-action="DeleteDoc" asp-route-id="@item.DoctorId" class="btn btn-sm btn-danger">@_localization.Getkey("Delete").Value</a>
                     </td>
                 </tr>
             }

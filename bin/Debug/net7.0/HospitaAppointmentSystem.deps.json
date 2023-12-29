@@ -18,6 +18,14 @@
         },
         "runtime": {
           "HospitaAppointmentSystem.dll": {}
+        },
+        "resources": {
+          "en-US/HospitaAppointmentSystem.resources.dll": {
+            "locale": "en-US"
+          },
+          "tr-TR/HospitaAppointmentSystem.resources.dll": {
+            "locale": "tr-TR"
+          }
         }
       },
       "Azure.Core/1.25.0": {

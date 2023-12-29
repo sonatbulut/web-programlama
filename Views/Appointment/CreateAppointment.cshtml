@@ -1,4 +1,4 @@
-@model Appointment
+@model HospitaAppointmentSystem.Data.Appointment
 
 <h2>Add Appointment</h2>
 <hr>
@@ -20,14 +20,14 @@
     }
 
     <div class="mb3">
-        <label asp-for="DoctorId" class="form-label">Doctor Id</label>
+        <label asp-for="DoctorId" class="form-label">Doctor Name</label>
         <select asp-for="DoctorId" asp-items="ViewBag.Doctors" class="form-control">
             <option value="">Choose</option>
         </select>
     </div>
 
     <div class="mb3">
-        <label asp-for="PatientId" class="form-label">Patient Id</label>
+        <label asp-for="PatientId" class="form-label">Patient Name</label>
         <select asp-for="PatientId" asp-items="ViewBag.Patients" class="form-control">
             <option value="">Choose</option>
         </select>
@@ -39,10 +39,43 @@
     </div>
 
     <div class="mb3">
-        <!-- Tarih seçimi için input -->
-        <select asp-for="AppointmentTime" asp-items="ViewBag.AvailableTimes" class="form-control"></select>
+        <label for="AppointmentTime" class="form-label">Appointment Time</label>
+        <select asp-for="AppointmentTime" name="AppointmentTime" class="form-control">
+            <option value="">Choose Time</option>
+        </select>
     </div>
     <button type="submit" class="btn btn-secondary">Save</button>
 </form>
+<script>
+    $(document).ready(function () {
+        var GetAppointmentTimesJsonUrl = '@Url.Action("GetAppointmentTimesJson", "Appointment")';
+        
+        // Doktor veya tarih değiştiğinde saatleri güncelle
+        function updateAppointmentTimes() {
+            var selectedDate = $('#AppointmentDate').val();
+            var doctorId = $('#DoctorId').val();
+            if (!selectedDate || !doctorId) {
+                $('#AppointmentTime').empty().append('<option value="">Select time</option>');
+                return;
+            }
+            
+            $.ajax({
+                url: GetAppointmentTimesJsonUrl,
+                type: 'GET',
+                data: { selectedDate: selectedDate, doctorId: doctorId },
+                success: function (data) {
+                    var selectAppointmentTime = $('#AppointmentTime');
+                    selectAppointmentTime.empty().append('<option value="">Select time</option>');
+                    $.each(data, function (index, item) {
+                        selectAppointmentTime.append($('<option></option>').val(item.value).text(item.text));
+                    });
+                },
+                error: function () {
+                    alert('An error occurred while loading the times.');
+                }
+            });
+        }
 
-<script src="~/js/createAppointment.js" asp-append-version="true"></script>
+        $('#AppointmentDate, #DoctorId').change(updateAppointmentTimes);
+    });
+</script>

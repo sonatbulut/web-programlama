@@ -10,7 +10,9 @@ namespace HospitaAppointmentSystem.Data
         public Patient Patient { get; set; }=null!;
         public int DoctorId { get; set; }
         public Doctor Doctor { get; set; }=null!;
+
         public TimeSpan AppointmentTime { get; set; }
+
         public DateTime AppointmentDate { get; set; }
     }
 }

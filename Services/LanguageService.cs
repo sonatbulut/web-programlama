@@ -1,7 +1,7 @@
 using System.Reflection;
 using Microsoft.Extensions.Localization;
 
-namespace HospitaAppointmentSystem
+namespace HospitaAppointmentSystem.Services
 {
     public class LanguageService
     {

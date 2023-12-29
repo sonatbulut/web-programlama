@@ -1,13 +1,16 @@
+using System.Globalization;
 using System.Reflection;
 using System.Text;
-using HospitaAppointmentSystem;
 using HospitaAppointmentSystem.Data;
+using HospitaAppointmentSystem.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using static HospitaAppointmentSystem.LanguageService;
+using static HospitaAppointmentSystem.Services.LanguageService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +24,19 @@ options.DataAnnotationLocalizerProvider =(type,factory)=>
 {
     var assemblyName = new AssemblyName(typeof(SharedResource).GetTypeInfo().Assembly.FullName);
     return factory.Create(nameof(SharedResource),assemblyName.Name);
+});
+builder.Services.Configure<RequestLocalizationOptions>(options=>
+{
+    var supportCultures = new List<CultureInfo>
+    {
+        new CultureInfo("en-US"),
+        new CultureInfo("fr-FR"),
+        new CultureInfo("tr-TR")
+    };
+    options.DefaultRequestCulture=new RequestCulture(culture:"tr-TR");
+    options.SupportedCultures= supportCultures;
+    options.SupportedUICultures=supportCultures;
+    options.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider());
 });
 #endregion
 
@@ -83,6 +99,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
 app.UseRouting();
 app.UseAuthentication();

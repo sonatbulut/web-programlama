@@ -28,73 +28,66 @@ namespace HospitaAppointmentSystem.Controllers
         }
 
         
+        [HttpGet]
+        public async Task<IActionResult> GetAppointmentTimesJson(DateTime selectedDate,int doctorId)
+        {
+            var times = await GetAppointmentTimes(selectedDate,doctorId);
+            return Json(new SelectList(times, "Value", "Text"));
+        }
+
+        private async Task<List<SelectListItem>> GetAppointmentTimes(DateTime appointmentDate,int doctorId)
+        {
+
+            var selectedTimes = await _context.Appointments
+                .Where(r => r.AppointmentDate.Date == appointmentDate.Date && r.DoctorId==doctorId)
+                .Select(r => r.AppointmentTime)
+                .ToListAsync();
+
+            var times = new List<SelectListItem>();
+            var begin = new TimeSpan(9, 0, 0);
+            var end = new TimeSpan(17, 0, 0);
+            var timeInterval = TimeSpan.FromMinutes(30);
+
+            for (var time = begin; time < end; time += timeInterval)
+            {
+                if (!selectedTimes.Contains(time))
+                {
+                    times.Add(new SelectListItem
+                    {
+                        Value = time.ToString(),
+                        Text = time.ToString(@"hh\:mm")
+                    });
+                }
+            }
+
+            return times;
+        }
+        [HttpGet]
         public async Task<IActionResult> CreateAppointment(int? doctorId)
         {
             
             ViewBag.Doctors = new SelectList(await _context.Doctors.ToListAsync(), "DoctorId","DocNameSurname");
             ViewBag.Patients = new SelectList(await _context.Patients.ToListAsync(), "PatientId","PatientNameSurname");
-            DateTime selectedDate = DateTime.Today;
-            ViewBag.AvailableTimes = await GetAvailableTimes(selectedDate);
+            // DateTime selectedDate = DateTime.Today;
+            // ViewBag.AvailableTimes = await GetAvailableTimes(selectedDate);
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult>CreateAppointment(Appointment model,string appointmentTime)
+        public async Task<IActionResult>CreateAppointment(Appointment model)
         {
-            if (TimeSpan.TryParseExact(appointmentTime.Trim(), "hh\\:mm", CultureInfo.InvariantCulture, out var parsedAppointmentTime))
-            {
-                // Tarihi ve saati birleştir
-                model.AppointmentDate = model.AppointmentDate.Date + parsedAppointmentTime;
-            }
-            else
-            {
-                // Hatalı saat formatı durumunda hata ekle ve formu geri göster
-                ModelState.AddModelError("AppointmentTime", "Invalid time format.");
-                return View(model);
-            }
             _context.Appointments.Add(model);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index","Home");
         }
-
-
-        public async Task<IEnumerable<SelectListItem>> GetAvailableTimes(DateTime appointmentDate)
-        {
-            var startTime = new TimeSpan(9, 0, 0); // Günün başlangıç saati: 09:00
-            var endTime = new TimeSpan(17, 0, 0); // Günün bitiş saati: 17:00
-            var timeInterval = 30; // Randevular arası zaman aralığı (dakika)
-
-            // O gün için olan randevuları çek
-            var bookedAppointments = await _context.Appointments
-                .Where(a => a.AppointmentDate.Date == appointmentDate.Date)
-                .Select(a => a.AppointmentDate.TimeOfDay)
-                .ToListAsync();
-
-            var availableTimes = new List<SelectListItem>();
-
-            // Başlangıç saatinden, bitiş saatine kadar döngü oluştur
-            for (var time = startTime; time < endTime; time = time.Add(TimeSpan.FromMinutes(timeInterval)))
-            {
-                // Zaten alınmış bir randevu saati değilse listeye ekle
-                if (!bookedAppointments.Contains(time))
-                {
-                    availableTimes.Add(new SelectListItem { Text = time.ToString(@"hh\:mm"), Value = time.ToString(@"hh\:mm") });
-                }
-            }
-
-            return availableTimes;
-        }
-
-
-        
         [HttpGet]
         public async Task<IActionResult> EditAppointment(int? id)
         {
             ViewBag.Doctors = new SelectList(await _context.Doctors.ToListAsync(), "DoctorId","DocNameSurname");
             ViewBag.Patients = new SelectList(await _context.Patients.ToListAsync(), "PatientId","PatientNameSurname");
-            DateTime selectedDate = DateTime.Today;
-            ViewBag.AvailableTimes = await GetAvailableTimes(selectedDate);
+            // DateTime selectedDate = DateTime.Today;
+            // ViewBag.AvailableTimes = await GetAvailableTimes(selectedDate);
             if(id==null)
             {
                 return NotFound();
