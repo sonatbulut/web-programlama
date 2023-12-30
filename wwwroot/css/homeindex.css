@@ -1,0 +1,29 @@
+.card {
+    margin-bottom: 20px; /* Kartlar arasında biraz boşluk ekler */
+  }
+  
+  .card-img-top {
+    width: 100%; /* Resmi kartın genişliğine sığacak şekilde ayarlar */
+    height: 600px; /* Tüm kart resimleri için sabit bir yükseklik belirler */
+    object-fit: cover; /* Resmin boyutlarını bozmadan belirtilen alana sığdırır */
+  }
+  
+  .card-body {
+    height: 100px; /* Kart içeriğinin yüksekliğini sabitler */
+    display: flex; /* Flexbox modelini etkinleştirir */
+    flex-direction: column; /* İçerikleri sütun olarak hizalar */
+    justify-content: center; /* İçeriği dikey olarak merkezler */
+    align-items: center; /* İçeriği yatay olarak merkezler */
+  }
+  
+  /* Küçük ekranlar için kartların üst üste gelmesini sağlayacak medya sorgusu */
+  @media (max-width: 576px) {
+    .card-img-top {
+      height: auto; /* Küçük ekranlarda resmin orijinal yüksekliğini korur */
+    }
+    
+    .card-body {
+      height: auto; /* Küçük ekranlarda içeriğin yüksekliğini içeriğe göre ayarlar */
+    }
+  }
+  

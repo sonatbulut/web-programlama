@@ -5,21 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - HospitaAppointmentSystem</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <link rel="stylesheet" href="~/HospitaAppointmentSystem.styles.css" asp-append-version="true" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">HospitalAppointmentSystem</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav">
+<body >
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fs-4" asp-area="" asp-controller="Home" asp-action="Index">HospitalAppointmentSystem</a>
+            <!-- tggl btn -->
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- sidebar -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <!-- sidebar header -->
+                <div class="offcanvas-header text-black border-bottom">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">HospitalAppointmentSystem</h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!-- sidebar body -->
+                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
                         @if(User.Identity?.IsAuthenticated==true)
                         {
                             @if(User.IsInRole("admin"))
@@ -38,59 +50,75 @@
                                 </li>
                             }
                         }
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">@_localization.Getkey("Home").Value</a>
-                        </li> 
-                    </ul>
-                    <ul class="navbar-nav ms-auto">
-                        @if(User.Identity?.IsAuthenticated==true)
-                        {
+                        <ul class="navbar-nav ms-auto">
+                            @if(User.Identity?.IsAuthenticated==true)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark">@_localization.Getkey("Welcome").Value, @User.Identity.Name</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">@_localization.Getkey("Logout").Value</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">@_localization.Getkey("Login").Value</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Create">@_localization.Getkey("Register").Value</a>
+                                </li>
+                            }
+                            
                             <li class="nav-item">
-                                <a class="nav-link text-dark">@_localization.Getkey("Welcome").Value, @User.Identity.Name</a>
+                                <div class="dropdown">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Language</button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="en-US" class="dropdown-item"><i class="flag-icon flag-icon-gb"></i>ENG</a>
+    
+                                        </li>
+                                        <li>
+                                            <a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="tr-TR" class="dropdown-item">
+                                                <i class="flag-icon flag-icon-gb"></i>TR
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">@_localization.Getkey("Logout").Value</a>
-                            </li>
-                        }
-                        else
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">@_localization.Getkey("Login").Value</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Create">@_localization.Getkey("Register").Value</a>
-                            </li>
-                        }
-                        <li class="nav-item">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Dil
-                              </button>
-                              <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item"
-                                  href="@Url.Action("ChangeLanguage", "Home", new { culture = "tr-TR" })">Türkçe</a>
-                                <a class="dropdown-item"
-                                  href="@Url.Action("ChangeLanguage", "Home", new { culture = "en-US" })">English</a>
-                              </div>
-                            </div>
-                
-                          </li>
+                        </ul>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+<script>
+    $(document).ready(function () {
+        // Dil seçimi için event handler tanımla
+        $('.dropdown-menu .dropdown-item').on('click', function () {
+            var selectedLanguage = $(this).text();
+            // Buton metnini seçilen dil ile güncelle
+            $('.dropdown-toggle').text(selectedLanguage);
+            // Seçimi localStorage'a kaydet
+            localStorage.setItem('selectedLanguage', selectedLanguage);
+        });
+
+        // Sayfa yüklendiğinde, daha önce seçilmiş dili kontrol et
+        var savedLanguage = localStorage.getItem('selectedLanguage');
+        if (savedLanguage) {
+            // Kaydedilmiş dil varsa buton metnini güncelle
+            $('.dropdown-toggle').text(savedLanguage);
+        }
+    });
+</script>

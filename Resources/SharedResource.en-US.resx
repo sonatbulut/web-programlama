@@ -253,4 +253,8 @@
     <value>Patient Phone</value>
     <comment>phone</comment>
   </data>
+  <data name="Buttons" xml:space="preserve">
+    <value>Buttons</value>
+    <comment>buttons</comment>
+  </data>
 </root>

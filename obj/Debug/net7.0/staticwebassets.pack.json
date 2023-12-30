@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\HospitaAppointmentSystem.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\css\\homeindex.css",
+      "PackagePath": "staticwebassets\\css\\homeindex.css"
+    },
+    {
       "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -15,10 +19,6 @@
     {
       "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\img\\0584d60d-5334-4a98-baa1-32a97639ce97.jpeg",
       "PackagePath": "staticwebassets\\img\\0584d60d-5334-4a98-baa1-32a97639ce97.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\img\\2575213e-43e5-454a-adc5-34375cb2ca07.jpeg",
-      "PackagePath": "staticwebassets\\img\\2575213e-43e5-454a-adc5-34375cb2ca07.jpeg"
     },
     {
       "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\img\\3b6454a2-3b34-404b-a531-59ea16bfb677.jpg",
@@ -39,6 +39,10 @@
     {
       "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\img\\emre.jpeg",
       "PackagePath": "staticwebassets\\img\\emre.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\img\\img2.jpg",
+      "PackagePath": "staticwebassets\\img\\img2.jpg"
     },
     {
       "Id": "C:\\Users\\OEM\\OneDrive\\Masaüstü\\HospitalAppointmentSystem\\wwwroot\\js\\createAppointment.js",

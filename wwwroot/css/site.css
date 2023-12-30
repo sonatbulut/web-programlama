@@ -1,22 +1,23 @@
-html {
-  font-size: 14px;
+body {
+  background: url("/img/img2.jpg") rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
+@media (min-width: 700) {
+  .sidebar{
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.nav-link.active {
+  background-color: #007bff; /* Or any other color */
+  color: #fff;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
 
-body {
-  margin-bottom: 60px;
-}
+
+

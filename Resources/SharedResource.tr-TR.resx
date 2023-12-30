@@ -265,4 +265,8 @@
     <value>Hasta Telefon</value>
     <comment>tel</comment>
   </data>
+  <data name="Buttons" xml:space="preserve">
+    <value>Butonlar</value>
+    <comment>butonlar</comment>
+  </data>
 </root>
