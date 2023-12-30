@@ -9,117 +9,117 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HospitaAppointmentSystem
 build_property.RootNamespace = HospitaAppointmentSystem
-build_property.ProjectDir = C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\
+build_property.ProjectDir = c:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem
+build_property.MSBuildProjectDirectory = c:\Users\OEM\OneDrive\Masaüstü\HospitalAppointmentSystem
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Account/Create.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Account/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Account/Login.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Appointment/CreateAppointment.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Appointment/CreateAppointment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcQ3JlYXRlQXBwb2ludG1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Appointment/DeleteAppointment.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Appointment/DeleteAppointment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcRGVsZXRlQXBwb2ludG1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Appointment/EditAppointment.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Appointment/EditAppointment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcRWRpdEFwcG9pbnRtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Appointment/IndexAppointment.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Appointment/IndexAppointment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcSW5kZXhBcHBvaW50bWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Doctor/Create.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Doctor/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Doctor/DeleteDoc.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Doctor/DeleteDoc.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERlbGV0ZURvYy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Doctor/EditDoc.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Doctor/EditDoc.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEVkaXREb2MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Doctor/Index.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Doctor/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Home/Index.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Home/Privacy.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Patient/CreatePatient.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Patient/CreatePatient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxDcmVhdGVQYXRpZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Patient/DeletePatient.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Patient/DeletePatient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxEZWxldGVQYXRpZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Patient/EditPatient.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Patient/EditPatient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxFZGl0UGF0aWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Patient/IndexPatient.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Patient/IndexPatient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxJbmRleFBhdGllbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Roles/Create.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Roles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Roles/Edit.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Roles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Roles/Index.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Roles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Shared/Error.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Users/Create.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Users/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Users/Edit.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Users/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Users/Index.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Users/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/_ViewImports.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/_ViewStart.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Shared/_Layout.cshtml]
+[c:/Users/OEM/OneDrive/Masaüstü/HospitalAppointmentSystem/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8923unl57o

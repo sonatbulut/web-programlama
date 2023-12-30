@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HospitaAppointmentSystem.Controllers
 {
-    //[Authorize(Roles ="admin")]
+    [Authorize(Roles ="admin")]
     public class UsersController:Controller
     {
 
@@ -31,28 +31,7 @@ namespace HospitaAppointmentSystem.Controllers
             return View();
         }
         
-        // [HttpPost] // bu method patient tablona veri ekleyecek
-        // public async Task<IActionResult> Create(CreateViewModel model)
-        // {
-        //     if(ModelState.IsValid)
-        //     {
-        //         var user = new AppUser{UserName="user"+ new Random().Next(1,99999), Email=model.Email,FullName=model.FullName};
-        //         IdentityResult result= await _userMnanager.CreateAsync(user,model.Password);
-
-        //         if(result.Succeeded)
-        //         {
-        //             return RedirectToAction("Index");
-        //         }
-
-        //         foreach(IdentityError err in result.Errors)
-        //         {
-        //             ModelState.AddModelError("",err.Description);
-        //         }
-
-        //     }
-        //     return View(model);
-        // }
-
+    
         public async Task<IActionResult> Edit(string id)
         {
             if(id==null)

@@ -1,10 +1,12 @@
 using HospitaAppointmentSystem.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace HospitaAppointmentSystem.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class RolesController:Controller
     {
         private readonly RoleManager<AppRole> _roleManager;

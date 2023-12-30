@@ -1,9 +1,11 @@
 using HospitaAppointmentSystem.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace HospitaAppointmentSystem.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class PatientController: Controller
     {
         private readonly DataContext _context;
@@ -21,6 +23,7 @@ namespace HospitaAppointmentSystem.Controllers
             return View();
         }
 
+        [Authorize(Roles = "admin")]
         [HttpPost]
         public async Task<IActionResult> CreatePatient(Patient model)
         {

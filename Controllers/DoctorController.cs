@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HospitaAppointmentSystem.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class DoctorController: Controller
     {
         private readonly DataContext _context;
@@ -25,7 +26,7 @@ namespace HospitaAppointmentSystem.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "admin")]
+        
         public async Task<IActionResult> Create(Doctor model,IFormFile imageFile)
         {
             var extension = Path.GetExtension(imageFile.FileName);
